@@ -5,9 +5,10 @@ public class queue
     private int front, rear, size, capacity;
     private int queueArray[];
     
-    queue()
+    queue(int theCapacity)
     {
-        this.queueArray = new int[10];
+        this.queueArray = new int[theCapacity];
+        capacity = theCapacity;
         this.front = 0;
         this.rear = 0;
         this.size = 0;
@@ -20,6 +21,7 @@ public class queue
             queueArray[rear] = dato;
             size++;
             rear++;
+            System.out.println("Elemento encolado con éxito: " + dato);
         }
         else
         {
@@ -76,5 +78,9 @@ public class queue
 
         }
         System.out.println("");
+    }
+    public int getCapacity()
+    {
+        return this.capacity;
     }
 }
