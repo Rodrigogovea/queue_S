@@ -57,7 +57,7 @@ public class queue
     }
     public boolean isEmpty()
     {
-        if(this.size == 0)
+        if(size == 0)
             return true;
         else
             return false;
